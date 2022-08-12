@@ -1,16 +1,8 @@
-import React, { useEffect, useRef } from 'react'
-import { render } from 'react-dom'
-
-import data from '@emoji-mart/data'
+import React from 'react'
+import 'emoji-mart/css/emoji-mart.css'
 import { Picker } from 'emoji-mart'
 
-export default function EmojiPicker(props) {
-    const ref = useRef()
 
-    useEffect(() => {
-        new Picker({ ...props, data, ref })
-    }, [])
-
-    return <div ref={ref} />
+export default function EmojiPicker(props){
+    return (<Picker native={true}/>)
 }
-
